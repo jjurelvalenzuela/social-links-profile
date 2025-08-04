@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Inter", Arial, sans-serif;
+  src: url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  /* COLOR PALETTE */
+  --grey-900: #141414;
+  --grey-800: #1f1f1f;
+  --grey-700: #333333;
+  --green: #caf82a;
+  --white: #ffffff;
+
+  /* font-weight: 400; = Regular
+
+font-weight: 600; = SemiBold
+
+font-weight: 700; = Bold */
+  /* TYPOGRAPHY */
+  --font-family: "Inter", Arial, sans-serif;
+  --line-height: 1.5;
+  /* Preset 1 */
+  --preset1-size: 1.5rem;
+  --preset1-fw: 700;
+
+  /* Preset 2 */
+  --preset2-size: 0.875rem;
+  --preset2-fw: 400;
+
+  /* Preset 2  Bold*/
+  --preset2b-size: 0.875rem;
+  --preset2b-fw: 700;
+}
+/* Text Preset */
+.text-preset1 {
+  font-size: var(--preset1-size);
+  font-weight: var(--preset1-fw);
+}
+
+.text-preset2 {
+  font-size: var(--preset2-size);
+  font-weight: var(--preset2-fw);
+}
+
+.text-preset2-bold {
+  font-size: var(--preset2bb-size);
+  font-weight: var(--preset2bb-fw);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  background-color: var(--grey-800);
+  line-height: var(--line-height);
+  font-family: var(--font-family);
+  color: var(--white);
+}
