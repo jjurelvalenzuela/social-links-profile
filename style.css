@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Inter", Arial, sans-serif;
+  font-family: "Inter";
   src: url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
     format("truetype");
   font-weight: 100 900;
@@ -23,15 +23,15 @@ font-weight: 700; = Bold */
   --font-family: "Inter", Arial, sans-serif;
   --line-height: 1.5;
   /* Preset 1 */
-  --preset1-size: 1.5rem;
-  --preset1-fw: 700;
+  --preset1-size: 1.5rem; /*24px */
+  --preset1-fw: 600;
 
   /* Preset 2 */
-  --preset2-size: 0.875rem;
+  --preset2-size: 0.875rem; /*14px */
   --preset2-fw: 400;
 
   /* Preset 2  Bold*/
-  --preset2b-size: 0.875rem;
+  --preset2b-size: 0.875rem; /*14px */
   --preset2b-fw: 700;
 }
 /* Text Preset */
@@ -46,8 +46,8 @@ font-weight: 700; = Bold */
 }
 
 .text-preset2-bold {
-  font-size: var(--preset2bb-size);
-  font-weight: var(--preset2bb-fw);
+  font-size: var(--preset2b-size);
+  font-weight: var(--preset2b-fw);
 }
 
 *,
@@ -68,14 +68,86 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style-type: none;
+  display: block;
+}
+
 img {
   max-width: 100%;
   display: block;
 }
 
 body {
-  background-color: var(--grey-800);
+  background-color: var(--grey-900);
   line-height: var(--line-height);
   font-family: var(--font-family);
   color: var(--white);
+}
+
+.card,
+img {
+  margin: 0 auto;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 327px;
+  height: 579px;
+  background-color: var(--grey-800);
+  margin: 0 auto;
+  padding: 1.5em;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.user-img {
+  width: 88px;
+  border-radius: 50%;
+}
+
+h1 {
+  padding-top: 1.5em;
+}
+
+.location {
+  color: var(--green);
+}
+
+.about-me {
+  padding: 1.714em 0;
+}
+
+/* BUTTONS STYLE */
+
+.user-links {
+  padding: 0.63em 0;
+  background-color: var(--grey-700);
+  border-radius: 10px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.user-links:hover,
+.user-links:focus {
+  cursor: pointer;
+  background-color: var(--green);
+  color: var(--grey-700);
+}
+
+.user-links:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 384px;
+    height: 611px;
+    padding: 2.5em;
+  }
 }
